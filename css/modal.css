@@ -1,0 +1,109 @@
+@import url(colors.css);
+
+
+body{
+    background: var(--dark);
+}
+
+.view-modal, .popup{
+    position: absolute;
+    left: 50%;
+  }
+  button{
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: background 0.1s linear, border-color 0.1s linear, color 0.1s linear;
+  }
+
+  .popup{
+    background: transparent;
+    padding: 25px;
+    border-radius: 10px;
+    top: -150%;
+    max-width: 380px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 0px 50px 0px #ff43227e;
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: top 0s 0.2s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+  }
+  .popup.show{
+    top: 50%;
+    opacity: 1;
+    pointer-events: auto;
+    transform:translate(-50%, -50%) scale(1);
+    transition: top 0s 0s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+  
+  }
+  .popup :is(header, .icons, .field){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .popup header{
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--primary);
+  }
+  header span{
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--light);
+  }
+  header .close, .icons a{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
+  header .close{
+    color: var(--dark);
+    font-size: 17px;
+    background: var(--primary);
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+  }
+  header .close:hover{
+    background: #ebedf9;
+  }
+  .popup .content{
+    margin: 20px 0;
+  }
+  
+  .content{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .content img{
+      width: 50%;
+  }
+
+  a {
+    padding: 10px 25px;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--light);
+    text-decoration: none;
+    transition: .3s;
+    font-weight: bold;
+  }
+
+  a:hover{
+    transition: .3s;
+    background: var(--primary);
+    box-shadow: 0px 0px 20px 0px #ff43227e;
+  }

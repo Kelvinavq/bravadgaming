@@ -1,0 +1,23 @@
+@import url(colors.css);
+
+.cursor{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    transition-duration: 100ms;
+    z-index: -1;
+}
+
+.cursor_int{
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+
+}

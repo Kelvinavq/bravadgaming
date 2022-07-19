@@ -1,0 +1,195 @@
+@import url(colors.css);
+
+body {
+    background: var(--dark);
+}
+
+.contenedor_equipo.active{
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_equipo.inactive{
+    display: none;
+}
+
+.contenedor_coach.active{
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_coach.inactive{
+    display: none;
+}
+
+
+main {
+    width: 90%;
+}
+
+.grid_equipo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info_equipo {
+    margin-top: 50px;
+}
+
+.botones_equipo {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    margin-bottom: -50px;
+    margin-top: 30px;
+    position: absolute;
+}
+
+.btn_equipo{
+    cursor: pointer;
+}
+
+.btn_equipo-1 {
+    border: 2px solid var(--light);
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 5%;
+    color: var(--light);
+}
+
+.btn_equipo-2 {
+    border: 2px solid var(--light);
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    color: var(--light);
+}
+
+.btn_equipo:hover {
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn_equipo.selected {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+
+.nombre_equipo {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre_equipo span:nth-child(1) {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.nombre_equipo span:nth-child(2) {
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--light);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.info_equipo_dos {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.edad,
+.nacionalidad,
+.rol,
+.equipo,
+.title_social {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.edad span:nth-child(1),
+.nacionalidad span:nth-child(1),
+.rol span:nth-child(1),
+.equipo span:nth-child(1),
+.title_social span:nth-child(1) {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.edad span:nth-child(2),
+.nacionalidad span:nth-child(2),
+.rol span:nth-child(2),
+.equipo span:nth-child(2) {
+    color: var(--light);
+    font-weight: bold;
+}
+
+.redes_equipo{
+    margin-top: 5px;
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.redes_equipo i{
+    color: var(--primary);
+}
+
+.biografia{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.biografia span:nth-child(1){
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.biografia span:nth-child(2){
+    text-transform: capitalize;
+    color: var(--light);
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+
+.foto_jugador{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.foto_jugador img{
+    width: 100%;
+}
+
+
+
+@media (max-width: 1000px) {
+    .grid_equipo {
+        grid-template-columns: 1fr;
+    }
+
+    .info_equipo_dos {
+        grid-template-columns: 1fr 1fr;
+    }
+}

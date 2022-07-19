@@ -1,0 +1,145 @@
+@import url(colors.css);
+
+body{
+    background: var(--dark);
+}
+
+.contenedor_contacto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    width: 100%;
+}
+
+.contacto{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.right_contacto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.right_contacto .fondo{
+    width: 70%;
+    height: 100vh;
+    background: url(../assets/img/IG\ Perfil\ Viking.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.left_contacto{
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.texts_left h2{
+    color: var(--primary);
+    font-size: 2em;
+}
+
+.texts_left span{
+    margin-top: -5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--light);
+}
+
+form{
+    width: 100%;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    row-gap: 50px;
+}
+
+.grupo_input{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.grupo_input label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 15px);
+    transform-origin: left;
+    transition: transform .2s;
+    opacity:  0;
+}
+
+.grupo_input input, textarea{
+    width: 100%;
+    padding: 15px 5px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid var(--light);
+    color: var(--light);
+}
+
+.grupo_input textarea{
+    height: 18px
+}
+textarea::-webkit-scrollbar {
+    width: 3px; 
+ }
+
+ textarea::-webkit-scrollbar-track {
+  background-color: var(--secondary);
+  border-radius: 15px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 25px;
+}
+
+.grupo_input:focus-within label{
+    transform: translate(0, -30px) scale(1);
+    font-weight: bold;
+    opacity:  1;
+    color: var(--light);
+   
+}
+
+.grupo_input input[type=submit] { 
+    background: var(--primary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media (max-width: 960px) {
+    .contacto{
+        grid-template-columns: 1fr;
+    }
+
+    .right_contacto{
+        margin-top: 150px;
+    }
+
+    .right_contacto .fondo{
+        width: 100%;
+        height: 100%;
+        background: url(../assets/img/BANNER.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

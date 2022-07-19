@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Share Modal | CodingNepal</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+  </head>
+
+  <body>
+    <div class="popup show">
+      <header>
+        <span>Bravad Gaming</span>
+        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+      </header>
+      <div class="content">
+        <img src="assets/icons/error.gif" alt="" />
+
+        <a href="">Aceptar</a>
+      </div>
+    </div>
+
+    <script
+    src="https://kit.fontawesome.com/4085e1bd7e.js"
+    crossorigin="anonymous"
+  ></script>
+
+    <script>
+      const viewBtn = document.querySelector(".view-modal"),
+        popup = document.querySelector(".popup"),
+        close = popup.querySelector(".close"),
+        field = popup.querySelector(".field"),
+        input = field.querySelector("input");
+
+      viewBtn.onclick = () => {
+        popup.classList.toggle("show");
+      };
+      close.onclick = () => {
+        viewBtn.click();
+      };
+    </script>
+  </body>
+</html>

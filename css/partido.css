@@ -1,0 +1,166 @@
+@import url(colors.css);
+
+body {
+    background-color: var(--dark);
+}
+
+.contenedor_partido {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_partido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.title_partido h2 {
+    font-size: 1.2em;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.title_partido span {
+    font-size: 2em;
+    margin-top: -20px;
+    color: var(--light);
+    font-weight: bold;
+}
+
+.title_partido img {
+    width: 150px;
+}
+
+.vs_equipos {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+}
+
+.vs_left,
+.vs_center,
+.vs_right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs_left img,
+.vs_right img {
+    width: 120px;
+}
+
+.vs_left span:nth-child(2),
+.vs_right span:nth-child(2) {
+    margin-top: 10px;
+    color: var(--light);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.vs_center {
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.vs_left span:nth-child(3),
+.vs_right span:nth-child(3) {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    margin-top: 5px;
+
+
+}
+
+.info_partido {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.fecha_partido,
+.hora_partido {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.fecha_partido span:nth-child(1),
+.hora_partido span:nth-child(1) {
+    color: var(--secondary);
+}
+
+.fecha_partido span:nth-child(2),
+.hora_partido span:nth-child(2) {
+    color: var(--light);
+}
+
+@media (min-width: 1000px) {
+    .title_partido h2{
+        font-size: 2em;
+    }
+
+    .title_partido span{
+        font-size: 3em;
+    }
+
+    .title_partido img{
+        width: 250px;
+    }
+
+    .vs_left img, .vs_right img{
+        width: 150px;
+    }
+
+    .vs_center{
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 600px) {
+    .title_partido h2{
+        font-size: 1em;
+    }
+
+    .title_partido span{
+        font-size: 1.5em;
+    }
+
+    .title_partido img{
+        width: 150px;
+    }
+
+    .vs_left img, .vs_right img{
+        width: 100px;
+    }
+
+    .vs_center{
+        font-size: 4em;
+    }
+}
